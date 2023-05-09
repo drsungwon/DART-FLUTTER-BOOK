@@ -1,0 +1,5 @@
+set(2) called ==> _timemachine is [0]
+set(4) called ==> _timemachine is [0, 2]
+set(6) called ==> current 4 is ignored.
+set(8) called ==> _timemachine is [0, 2, 6]
+8, previously [0, 2, 6]

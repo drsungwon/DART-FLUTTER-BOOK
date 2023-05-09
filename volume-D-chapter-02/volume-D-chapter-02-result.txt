@@ -1,0 +1,16 @@
+(base) $ dart volume-D-chapter-02.dart 
+$ server activated - 127.0.0.1:4040.
+$ http request for / at (2022-01-27 16:13:20.215461).
+$ http response is 'Hello, World!'.
+$ send '200 ok'.
+$ http request for /add,4,3 at (2022-01-27 16:13:31.532855).
+$ http response is result of 'add' operation.
+$ send '200 ok'.
+$ http request for /sample.txt at (2022-01-27 16:13:55.602507).
+$ http response is '/sample.txt' file transfer.
+$ send '200 ok'.
+$ http request for /applemango at (2022-01-27 16:14:18.461711).
+$ unsupported uri.
+$ send '404 not-found'.
+^C
+drsungwon~$ 

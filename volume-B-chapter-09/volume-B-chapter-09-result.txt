@@ -1,0 +1,37 @@
+[1] Integer Class
+[1-1] 3
+[1-2] 3
+[1-3] 3
+[1-4] 2
+[1-5] 2
+[1-6] 2
+[2] Double Class
+[2-1] 3.8
+[2-2] 3.8
+[2-3] 3
+[2-4] 4
+[2-5] 1.8
+[2-6] 1.8
+[2-7] 1
+[2-8] 2
+[3] String Class
+[3-1] hello, dart!
+[3-2] HELLO, DART!
+[3-3] 12
+[3-4] Hello
+[3-5] !
+[4] Boolean Class
+[4-1] true
+[5] Class Type Operators
+[5-1] true
+[5-2] true
+[5-3] true
+[5-4] true
+[5-5] false
+[5-6] false
+[5-7] false
+[5-8] false
+[5-9] true
+[5-10] false
+[5-11] false
+[5-12] true

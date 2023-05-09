@@ -1,0 +1,35 @@
+(base) $ dart volume-D-chapter-03-client.dart 
+|-> [step.1] GET /
+|<- status-code    : 200
+|<- content-type   : text/plain; charset=utf-8
+|<- content-length : 13
+|<- content        : Hello, World!
+|-> [step.2] GET /add,3,6
+|<- status-code    : 200
+|<- content-type   : text/plain; charset=utf-8
+|<- content-length : 9
+|<- content        : 3 + 6 = 9
+|-> [step.3] GET /sample.txt
+|<- status-code    : 200
+|<- content-type   : text/plain; charset=utf-8
+|<- content-length : 27
+|<- content        : [BOF]
+
+Hello, World!
+
+[EOF]
+|-> [step.4] POST item=product#1234
+|<- status-code    : 200
+|<- content-type   : text/plain; charset=utf-8
+|<- content-length : 31
+|<- content        : Product 'product#1234' accepted
+|-> [step.5] PUT /timestamp.txt
+|<- status-code    : 200
+|<- content-type   : text/plain; charset=utf-8
+|<- content-length : 43
+|<- content        : http://127.0.0.1:4040/timestamp.txt created
+|-> [step.6] DELETE /timestamp.txt
+|<- status-code    : 200
+|<- content-type   : text/plain; charset=utf-8
+|<- content-length : 21
+|<- content        : timestamp.txt deleted

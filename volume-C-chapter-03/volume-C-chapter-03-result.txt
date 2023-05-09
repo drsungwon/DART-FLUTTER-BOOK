@@ -1,0 +1,2 @@
+> Circle.draw(): center(0,0) with r[10]
+> Square.draw(): center(0,0) with h[10] and w[10]

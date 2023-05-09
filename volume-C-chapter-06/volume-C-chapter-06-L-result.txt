@@ -1,0 +1,2 @@
+catch is RangeError (index): Index out of range: index should be less than 2: 2
+tmpInt is 0

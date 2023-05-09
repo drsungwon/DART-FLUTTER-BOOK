@@ -1,0 +1,1 @@
+finally: result is 1

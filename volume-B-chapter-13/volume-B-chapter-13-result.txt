@@ -1,0 +1,51 @@
+[1] Unicode Presentation
+가
+{A: A, a: a, clap: 👏, smile: 🙂, star: ★}
+
+[2] Cascade Operators
+[0, 1, 2]
+
+[3] forEach Method
+★ 0 ★
+★ 1 ★
+★ 2 ★
+
+[4] forEach Method with Nested Function
+🙂 0 🙂
+🙂 1 🙂
+🙂 2 🙂
+
+[5] Conditional Expression
+dicEmoji is not empty
+
+[6] Bitwise Operators
+2 1 3 0
+
+[7] Hexa Decimal Presentation
+1
+255
+
+[8] Exponential Presentation
+110
+
+[9] String to Number Conversion
+1
+1.1
+
+[10] Enumerator
+[Color.red, Color.green, Color.blue]
+Color.red
+
+[11] Null Safety
+3
+null
+Null
+💙 null-safety 💙
+★ null-safety ★
+3
+1
+3
+1
+null
+1
+5

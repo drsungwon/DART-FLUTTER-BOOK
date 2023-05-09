@@ -1,0 +1,5 @@
+[BOF]
+
+Hello, World!
+
+[EOF]

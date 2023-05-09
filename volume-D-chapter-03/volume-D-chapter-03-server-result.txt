@@ -1,0 +1,14 @@
+(base) $ dart volume-D-chapter-03-server.dart 
+$ Server activated in 127.0.0.1:4040
+$ GET / from 127.0.0.1:51257
+$ GET /add,3,6 from 127.0.0.1:51258
+$ GET /sample.txt from 127.0.0.1:51258
+$ POST / from 127.0.0.1:51258
+> content-type   : text/plain; charset=utf-8
+> content-length : 17
+> content        : item=product#1234
+$ PUT /timestamp.txt from 127.0.0.1:51258
+> content-type   : text/plain; charset=utf-8
+> content-length : 38
+> content        : created at 2022-01-28 23:10:12.566766.
+$ DELETE /timestamp.txt from 127.0.0.1:51258

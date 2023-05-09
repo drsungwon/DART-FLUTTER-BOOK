@@ -1,0 +1,12 @@
+[01] 0 and 3
+[02] Integer
+[03] 0 and 3
+[04] 9
+[05] 9
+[06] 2
+[07] 11
+[08] 0 and 3
+[09] TimemachineInteger
+[10] 9 and 2
+[11] [0, 9]
+[12] 10, previously [0, 9]

@@ -1,0 +1,3 @@
+catch: Unsupported operation: Result of truncating division is Infinity: 1 ~/ 0
+catch: iTemp2 = 1 and re-try
+result is 1

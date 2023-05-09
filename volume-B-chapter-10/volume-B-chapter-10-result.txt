@@ -1,0 +1,27 @@
+[01] iList is [1, 2, 3, 4, 5]
+[02] Length of iList is 5
+[03] First element of iList is 1
+[04] Last element of iList is 5
+[05] Index of 3 in iList is 2
+[06] iList after insert(2, 99) is [1, 2, 99, 3, 4, 5]
+[07] iList after add(6) is [1, 2, 99, 3, 4, 5, 6]
+[08] iList after addAll([7,8,9]) is [1, 2, 99, 3, 4, 5, 6, 7, 8, 9]
+[09] iList after sort() is [1, 2, 3, 4, 5, 6, 7, 8, 9, 99]
+[10] iList after clear() is []
+[11] mixedList is [1, 2.2, Three]
+[12] mixedList[0] is int: true
+[13] mixedList[1] is double: true
+[14] mixedList[2] is String: true
+[15] 'for' loop with "mixedList[index]"
+[=>] mixedList[0] is 1
+[=>] mixedList[1] is 2.2
+[=>] mixedList[2] is Three
+[16] 'for' loop with "item in mixedList"
+[=>] mixedList[0] is 1
+[=>] mixedList[1] is 2.2
+[=>] mixedList[2] is Three
+[17] intList is List<int>: true
+[18] iList is List<int>: false
+[19] mixedList is List<int>: false
+[20] mixedList is List<dynamic>: true
+[21] iList is List<dynamic>: true

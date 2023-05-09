@@ -1,0 +1,26 @@
+class Point<T, Y> {
+  late T x;
+  late Y y;
+  Point(T givenX, Y givenY)
+      : x = givenX,
+        y = givenY {
+    objCount++;
+  }
+
+  static int objCount = 0;
+  get cnt => objCount;
+}
+
+void main() {
+  Point<int, double> iP1 = Point<int, double>(10, 10.1);
+  print("${iP1.runtimeType} iP1 => (${iP1.x},${iP1.y}), and cnt(${iP1.cnt})");
+
+  Point<int, int> iP2 = Point<int, int>(20, 20);
+  print("${iP2.runtimeType} iP2 => (${iP2.x},${iP2.y}), and cnt(${iP2.cnt})");
+
+  Point<double, String> dP = Point<double, String>(10.1, '10.1');
+  print("${dP.runtimeType} dP => (${dP.x},${dP.y}), and cnt(${dP.cnt})");
+
+  Point<String, String> sP = Point<String, String>('10.2', '10.2');
+  print("${sP.runtimeType} sP => (${sP.x},${sP.y}), and cnt(${sP.cnt})");
+}

@@ -1,0 +1,3 @@
+on NegativeDivisorException: iTemp2 is 0
+on NegativeDivisorException: iTemp2 = 1 and re-try
+finally: result is 1

@@ -1,0 +1,5 @@
+getMax(3,2) ==> 3
+getSum(3,2) ==> 5
+getMaxNamed(argv1: 3, argv2: 2) ==> 3
+getMaxDefault(3) ==> 3
+getMaxNamedDefault(argv1: 3) ==> 3

@@ -1,0 +1,19 @@
+[ 1] 1 == 1 : true
+[ 2] 1 == 2 : false
+[ 3] 1 != 1 : false
+[ 4] 1 != 2 : true
+[ 5] 1 >= 1 : true
+[ 6] 1 <= 1 : true
+[ 7] 1 >  1 : false
+[ 8] 1 <  1 : false
+[ 9] 1 >= 2 : false
+[10] 1 <= 2 : true
+[11] 1 >  2 : false
+[12] 1 <  2 : true
+[13] (1 == 1) OR  (1 == 2) : true
+[14] (1 == 1) AND (1 == 2) : false
+[15] NOT (1 == 1) : false
+[16] (a) number1[1] equal to number2[1].
+[17] (a) switch is OFF.
+[18] (a) switch is OFF.
+[19] program terminated in normal.

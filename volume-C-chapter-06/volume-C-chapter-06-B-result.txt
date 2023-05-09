@@ -1,0 +1,1 @@
+Uncaught Error: Unsupported operation: Result of truncating division is Infinity: 1 ~/ 0

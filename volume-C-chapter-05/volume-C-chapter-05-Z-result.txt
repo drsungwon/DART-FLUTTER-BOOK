@@ -1,0 +1,11 @@
+main(): started.
+doBackgroundJob(): 5 sec remained.
+serveCustomer(): waiting for order.
+doBackgroundJob(): 4 sec remained.
+serveCustomer(): order 'Ice Coffee' received.
+main(): serve 'Ice Coffee'.
+doBackgroundJob(): 3 sec remained.
+doBackgroundJob(): 2 sec remained.
+doBackgroundJob(): 1 sec remained.
+doBackgroundJob(): finished.
+main(): completed.

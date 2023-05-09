@@ -1,0 +1,3 @@
+main(): started.
+main(): Hello, World!
+main(): completed.

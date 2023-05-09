@@ -1,0 +1,5 @@
+main(): started.
+serveCustomer(): waiting for order.
+serveCustomer(): order 'Ice Coffee' received.
+main(): serve 'Ice Coffee'.
+main(): completed.

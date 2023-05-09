@@ -1,0 +1,30 @@
+[Step.1] Map Creation
+dbFruit is {A001: Apple, A002: Mango}
+dbEmpty is {}
+
+[Step.2] Map Properties
+dbFruit.length is 2
+dbFruit["A001"] is Apple
+dbFruit.runtimeType is JsLinkedHashMap<dynamic, dynamic>
+dbFruit.isNotEmpty is true
+dbEmpty.runtimeType is JsLinkedHashMap<dynamic, dynamic>
+dbEmpty.isEmpty is true
+
+[Step.3] Map Addition
+'dbFruit + <A003 : Banana>' is {A001: Apple, A002: Mango, A003: Banana}
+'dbEmpty += dbFruit' is {A001: Apple, A002: Mango, A003: Banana}
+
+[Step.4] Map Replace
+dbFruit is {A001: Apple, A002: Mango, A003: Orange}
+
+[Step.5] Map containsKey() and containsValue()
+Key 'A002' in dbFruit ? : true
+Key 'A004' in dbFruit ? : false
+Value 'Apple' in dbFruit ? : true
+Value 'Kiwi' in dbFruit ? : false
+
+[Step.6] Map Removal
+dbFruit is {A001: Apple, A003: Orange}
+
+[Step.7] Map Clear
+dbEmpty is {}

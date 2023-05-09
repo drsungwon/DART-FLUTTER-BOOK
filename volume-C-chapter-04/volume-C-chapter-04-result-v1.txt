@@ -1,0 +1,4 @@
+Point<int> iP1 => (10,10), and cnt(1)
+Point<int> iP2 => (20,20), and cnt(2)
+Point<double> dP => (10.1,10.1), and cnt(3)
+Point<String> sP => (10.2,10.2), and cnt(4)

@@ -1,0 +1,3 @@
+on UnsupportedError: iTemp2 is 0
+on UnsupportedError: iTemp2 = 1 and re-try
+result is 1

@@ -1,0 +1,22 @@
+[1]
+Single Quotes 
+Double Quotes 
+"Double Quotes" in Single Quotes 
+'Single Quotes' in Double Quotes 
+'Escape Delimeter' in Single Quotes
+[2]
+Single Quotes
+Double Quotes
+"Double Quotes" in Single Quotes
+'Single Quotes' in Double Quotes
+'Escape Delimeter' in Single Quotes
+
+My name is Apple.
+My name is Apple.
+Dart is lovely.
+  
+My name is Mango.
+My name is Mango.
+Flutter is lovely.
+  
+1 3.14

@@ -1,0 +1,21 @@
+[1] Mango in List ?: true
+[1] Starts with 'Apple' ?: true
+[1] Ends with 'Red' ?: true
+[1] Index of 'Red': 9
+[1] Trim '  Banana  ': Banana
+[2] OS: macos
+[2] Source File: /temp/volume-C-chapter-10.dart
+[3] max(2,4): 4
+[3] min(2,4): 2
+[3] e: {2.718281828459045}
+[3] pi: {3.141592653589793}
+[4] async1(): 1 second left.
+[4] async2(): 2 second left.
+[4] async3(): 3 second left.
+[4] async1(): finished.
+[4] async2(): 1 second left.
+[4] async3(): 2 second left.
+[4] async2(): finished.
+[4] async3(): 1 second left.
+[4] async3(): finished.
+[4] Sum: 60 < Time: 0:00:03.022615 >

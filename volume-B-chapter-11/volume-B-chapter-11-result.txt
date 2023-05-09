@@ -1,0 +1,16 @@
+[01] setFill : {1, 2}
+[02] setEmpty : {}
+[03] setFill with add(3) : {1, 2, 3}
+[04] setEmpty with addAll({3, 4, 5}) : {3, 4, 5}
+[05] 3 in setFill ? : true
+[06] 5 in setFill ? : false
+[07] Union of setFill and setEmpty : {1, 2, 3, 4, 5}
+[08] Intersection of setFill and setEmpty : {3}
+[09] Difference of setFill to setEmpty : {1, 2}
+[10] setFill with remove(3) : {1, 2}
+[11] exSet1 : {1, 2, 3}
+[12] exSet2 : {}
+[13] Type of setFill : _LinkedHashSet<dynamic>
+[14] Type of setEmpty : _LinkedHashSet<dynamic>
+[15] Type of exSet1 : _LinkedHashSet<int>
+[16] Type of exSet2 : _LinkedHashSet<int>

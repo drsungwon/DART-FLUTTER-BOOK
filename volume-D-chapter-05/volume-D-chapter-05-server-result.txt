@@ -1,0 +1,31 @@
+(base) $ dart volume-D-chapter-05-server.dart 
+$ Server activated in 127.0.0.1:4040
+$ POST /api/0001 from 127.0.0.1:56792
+> content-type   : application/json; charset=utf-8
+> content-length : 16
+> content        : {"0001":"Seoul"}
+$ Success < {0001: Seoul} created > 
+> current DB     : {0001: Seoul}
+$ POST /api/0002 from 127.0.0.1:56793
+> content-type   : application/json; charset=utf-8
+> content-length : 16
+> content        : {"0002":"Busan"}
+$ Success < {0002: Busan} created > 
+> current DB     : {0001: Seoul, 0002: Busan}
+$ GET /api/0001 from 127.0.0.1:56793
+$ Success < {0001: Seoul} retrieved > 
+> current DB     : {0001: Seoul, 0002: Busan}
+$ PUT /api/0001 from 127.0.0.1:56792
+> content-type   : application/json; charset=utf-8
+> content-length : 18
+> content        : {"0001":"Sungnam"}
+$ Success < {0001: Sungnam} updated > 
+> current DB     : {0001: Sungnam, 0002: Busan}
+$ DELETE /api/0001 from 127.0.0.1:56793
+$ Success < {0001, Sungnam} deleted > 
+> current DB     : {0002: Busan}
+$ GET {ERROR: Unsupported API} 
+> current DB     : {0002: Busan}
+$ GET /api/0001 from 127.0.0.1:56793
+$ Fail < 0001 not-exist > 
+> current DB     : {0002: Busan}

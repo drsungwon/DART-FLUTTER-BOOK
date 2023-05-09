@@ -1,0 +1,10 @@
+1
+2.2
+3
+4.4
+Hello!
+1 2.2 Hello!
+RESULT[ 1, 2.2, 'Hello!' ]
+1 2.2 Hello!
+3.141592 1.3
+Apple Mango

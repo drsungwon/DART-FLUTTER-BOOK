@@ -1,0 +1,8 @@
+main(): started.
+doBackgroundJob(): 5 sec remained.
+main(): completed.
+doBackgroundJob(): 4 sec remained.
+doBackgroundJob(): 3 sec remained.
+doBackgroundJob(): 2 sec remained.
+doBackgroundJob(): 1 sec remained.
+doBackgroundJob(): finished.

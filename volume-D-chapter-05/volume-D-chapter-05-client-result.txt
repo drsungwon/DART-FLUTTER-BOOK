@@ -1,0 +1,36 @@
+(base) $ dart volume-D-chapter-05-client.dart 
+|-> [Step.1] Create by POST
+|<- status-code    : 200
+|<- content-type   : text/plain; charset=utf-8
+|<- content-length : 33
+|<- content        : Success < {0001: Seoul} created >
+|-> [Step.2] Create by POST
+|<- status-code    : 200
+|<- content-type   : text/plain; charset=utf-8
+|<- content-length : 33
+|<- content        : Success < {0002: Busan} created >
+|-> [Step.3] Read by GET
+|<- status-code    : 200
+|<- content-type   : text/plain; charset=utf-8
+|<- content-length : 35
+|<- content        : Success < {0001: Seoul} retrieved >
+|-> [Step.4] Update by PUT
+|<- status-code    : 200
+|<- content-type   : text/plain; charset=utf-8
+|<- content-length : 35
+|<- content        : Success < {0001: Sungnam} updated >
+|-> [Step.5] Delete by DELETE
+|<- status-code    : 200
+|<- content-type   : text/plain; charset=utf-8
+|<- content-length : 35
+|<- content        : Success < {0001, Sungnam} deleted >
+|-> [Step.6] Unsupported API
+|<- status-code    : 200
+|<- content-type   : text/plain; charset=utf-8
+|<- content-length : 28
+|<- content        : GET {ERROR: Unsupported API}
+|-> [Step.7] Unsupported Read
+|<- status-code    : 200
+|<- content-type   : text/plain; charset=utf-8
+|<- content-length : 23
+|<- content        : Fail < 0001 not-exist >
