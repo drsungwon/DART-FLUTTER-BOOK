@@ -13,7 +13,7 @@ http://mobilelab.khu.ac.kr/wordpress/fssp/?mode=list
 참고로 해당 게시판은 경희대학교 소프트웨어융합학과의 Dart & Flutter 수업을 위한 게시판으로,<br/>
 풀스택 개발이 쉬워지는 다트 & 플러터 도서에 대한 질의 응답도 가능합니다.<br/>
 
-도서 출간 후, Dart & Flutter의 최신 기술에 대한 내용은 아래의 링크에서 확인 가능합니다.<br/>
+그리고, 도서 출간 후에 발표된 Dart & Flutter의 최신 기술에 대한 내용은 아래의 링크에서 확인 가능합니다.<br/>
 http://mobilelab.khu.ac.kr/wordpress/beprogrammer/
 <br/>
 <br/>
