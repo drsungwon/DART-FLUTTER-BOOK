@@ -10,7 +10,7 @@
 http://mobilelab.khu.ac.kr/wordpress/fssp/?mode=list
 
 도서의 내용에 대한 질문도 위 링크의 게시판에서 익명으로 작성 가능합니다.<br/>
-참고로 해당 게시판은 경희대학교 소프트웨어융합학과의 Dart & Flutter 수업을 위한 게시판으로,
+참고로 해당 게시판은 경희대학교 소프트웨어융합학과의 Dart & Flutter 수업을 위한 게시판으로,<br/>
 풀스택 개발이 쉬워지는 다트 & 플러터 도서에 대한 질의 응답도 가능합니다.
 
 ![BOOK TITLE](/BOOKTITLE/TITLE.jpeg)
