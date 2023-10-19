@@ -27,6 +27,13 @@
 
 도서 출간 후에 발표된 Dart & Flutter의 최신 기술에 대한 내용은 아래의 링크를 통해서 확인할 수 있습니다.<br/>
 [http://mobilelab.khu.ac.kr/wordpress/beprogrammer/](http://mobilelab.khu.ac.kr/wordpress/beprogrammer/)
+
+(6) '경희의 오늘' 서비스 Flutter App 소스 공개
+
+경희대학교 안에서 매일 매일 업데이트되는 모든 소식은 알려주는 '경희의 오늘' 서비스를<br/>
+아래의 링크에서 체험도 하고, Flutter App 소스 코드를 확인하실 수 있습니다.<br/>
+[https://github.com/drsungwon/khu-today-app](https://github.com/drsungwon/khu-today-app)
+
 <br/>
 <br/>
 
