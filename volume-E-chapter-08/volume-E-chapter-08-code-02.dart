@@ -266,7 +266,7 @@ class HelloWidget extends StatelessWidget {
       body: Center(
         child: TextButton(
           style: TextButton.styleFrom(
-            primary: Colors.black,
+            foregroundColor: Colors.black,
             textStyle: const TextStyle(
               fontSize: 32,
             ),
