@@ -1,4 +1,4 @@
-void printMessage(var header, var message) {
+void printMessage(dynamic header, dynamic message) {
   print("[$header] $message");
 }
 

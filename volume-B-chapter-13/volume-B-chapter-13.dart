@@ -1,4 +1,4 @@
-void printStar(var item) {
+void printStar(dynamic item) {
   print("\u{2605} $item \u{2605}");
 }
 
@@ -51,7 +51,7 @@ void main() {
 
   print("\n[4] forEach Method with Nested Function");
 
-  void printSmile(var item) {
+  void printSmile(dynamic item) {
     print("\u{1F642} $item \u{1F642}");
   }
 
