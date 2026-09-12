@@ -67,7 +67,7 @@ void main() async {
   }
   dstSink.write(':=> $count ITEMS CALCULATED');
 
-  dstSink.close(); // Close the IOSink to free system resources.
+  await dstSink.close(); // Close the IOSink to free system resources.
 }
 
 // File : https://api.dart.dev/stable/dart-io/File-class.html
