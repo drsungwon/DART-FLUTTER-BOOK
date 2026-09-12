@@ -6,11 +6,13 @@ class ActivationFlag {
   set activated(bool givenFlag) => (_flag = givenFlag);
 }
 
-void doBackgroundJob(int jobTime, var jobEnd) {
+void doBackgroundJob(int jobTime, dynamic jobEnd) {
   if (jobTime > 0) {
     print("doBackgroundJob(): $jobTime sec remained.");
     Future.delayed(
-        Duration(seconds: 1), () => doBackgroundJob(jobTime - 1, jobEnd));
+      Duration(seconds: 1),
+      () => doBackgroundJob(jobTime - 1, jobEnd),
+    );
   } else {
     print("doBackgroundJob(): finished.");
     jobEnd.activated = true;
