@@ -1,5 +1,5 @@
 // Type.1 Normal Function
-int getMax(var argv1, var argv2) {
+int getMax(int argv1, int argv2) {
   if (argv1 >= argv2) {
     return argv1;
   } else {
@@ -8,10 +8,10 @@ int getMax(var argv1, var argv2) {
 }
 
 // Type.2 Shorthand Syntax Function
-int getSum(var argv1, var argv2) => argv1 + argv2;
+int getSum(int argv1, int argv2) => argv1 + argv2;
 
 // Type.3 Named Parameters
-int getMaxNamed({var argv1, var argv2}) {
+int getMaxNamed({required int argv1, required int argv2}) {
   if (argv1 >= argv2) {
     return argv1;
   } else {
@@ -20,7 +20,7 @@ int getMaxNamed({var argv1, var argv2}) {
 }
 
 // Type.4 Optional and Default Parameters in Normal Function
-int getMaxDefault(var argv1, [var argv2 = 1]) {
+int getMaxDefault(int argv1, [int argv2 = 1]) {
   if (argv1 >= argv2) {
     return argv1;
   } else {
@@ -29,7 +29,7 @@ int getMaxDefault(var argv1, [var argv2 = 1]) {
 }
 
 // Type.5 Optional and Default Parameters in Named Parameters
-int getMaxNamedDefault({var argv1, var argv2 = 1}) {
+int getMaxNamedDefault({required int argv1, int argv2 = 1}) {
   // [WARN] Protected code for local variables check
   // print(tmp1, tmp2, tmp3);
 
