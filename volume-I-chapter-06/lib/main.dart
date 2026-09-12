@@ -1,15 +1,19 @@
-import 'dart:html';
-import 'dart:core';
+import 'package:web/web.dart' as web;
 
-void main() async {
-  final header = querySelector('#target');
-  header?.text = "Ready?";
-  await Future.delayed(Duration(seconds: 2), () => {});
+Future<void> main() async {
+  final target = web.document.querySelector('#target');
 
-  for (var count = 5; count > 0; count--) {
-    header?.text = "$count";
-    await Future.delayed(Duration(seconds: 1), () => {});
+  if (target == null) {
+    throw StateError('#target 요소를 찾을 수 없습니다.');
   }
 
-  header?.text = "F.I.R.E.!";
+  target.textContent = 'Ready?';
+  await Future<void>.delayed(const Duration(seconds: 2));
+
+  for (var count = 5; count > 0; count--) {
+    target.textContent = '$count';
+    await Future<void>.delayed(const Duration(seconds: 1));
+  }
+
+  target.textContent = 'F.I.R.E.!';
 }
