@@ -6,46 +6,40 @@ class MyApp extends StatelessWidget {
   final Map info = {
     'appTitle': 'StatelessWidget Demo',
     'appBarTitle': 'Flutter Official Site',
-    'titleImageLink':
-      'https://storage.googleapis.com/cms-storage-bucket/'
-      '2f118a9971e4ca6ad737.png',
+    'titleImageLink': 'https://flutter.dev/assets/flutter-on-mobile.825104937d6f90daae08ce20d9c7c350.png',
     'titleSectionHeader': 'Flutter on Mobile',
     'titleSectionBody': 'https://flutter.dev/multi-platform/mobile',
     'titleSectionScore': 100,
-    'textSection': 'Bring your app idea to more users from day one by'
-      ' building with Flutter '
-      'on iOS and Android simultaneously, without sacrificing features, '
-      'quality, or performance. All mobile on day one: '
-      'Reach your full addressable market from day one by targeting users'
-      ' in both ecosystems from a single codebase. Do more with less: '
-      'Unite your mobile development team resources towards building '
-      'one seamless customer experience. One experience: '
-      'Release simultaneously on iOS and Android with feature parity '
-      'for the best experience for all users.',
+    'textSection':
+        'Bring your app idea to more users from day one by'
+        ' building with Flutter '
+        'on iOS and Android simultaneously, without sacrificing features, '
+        'quality, or performance. All mobile on day one: '
+        'Reach your full addressable market from day one by targeting users'
+        ' in both ecosystems from a single codebase. Do more with less: '
+        'Unite your mobile development team resources towards building '
+        'one seamless customer experience. One experience: '
+        'Release simultaneously on iOS and Android with feature parity '
+        'for the best experience for all users.',
   };
 
   @override
   Widget build(BuildContext context) {
     final titleImage = _buildTitleImage(info['titleImageLink']);
     Widget textSection = _buildTextSection(info['textSection']);
-    Widget buttonSection = 
-      _buildButtonSection(Theme.of(context).primaryColor);
-    Widget titleSection = _buildTitleSection(info['titleSectionHeader'],
-        info['titleSectionBody'], info['titleSectionScore']);
+    Widget buttonSection = _buildButtonSection(Theme.of(context).primaryColor);
+    Widget titleSection = _buildTitleSection(
+      info['titleSectionHeader'],
+      info['titleSectionBody'],
+      info['titleSectionScore'],
+    );
 
     return MaterialApp(
       title: info['appTitle'],
       home: Scaffold(
-        appBar: AppBar(
-          title: Text(info['appBarTitle']),
-        ),
+        appBar: AppBar(title: Text(info['appBarTitle'])),
         body: ListView(
-          children: [
-            titleImage,
-            titleSection,
-            buttonSection,
-            textSection,
-          ],
+          children: [titleImage, titleSection, buttonSection, textSection],
         ),
       ),
     );
@@ -53,12 +47,7 @@ class MyApp extends StatelessWidget {
 }
 
 Image _buildTitleImage(String imageName) {
-  return Image.network(
-    imageName,
-    width: 600,
-    height: 240,
-    fit: BoxFit.cover,
-  );
+  return Image.network(imageName, width: 600, height: 240, fit: BoxFit.cover);
 }
 
 Container _buildTitleSection(String name, String addr, int count) {
@@ -74,30 +63,23 @@ Container _buildTitleSection(String name, String addr, int count) {
                 padding: const EdgeInsets.only(bottom: 8),
                 child: Text(
                   name,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
               ),
-              Text(
-                addr,
-                style: TextStyle(
-                  color: Colors.grey[500],
-                ),
-              ),
+              Text(addr, style: TextStyle(color: Colors.grey[500])),
             ],
           ),
         ),
-/* old       
+        /* old       
         Icon(
           Icons.star,
           color: Colors.red[500],
         ),
         Text('$count'),
  */
-// New #1 : Start
+        // New #1 : Start
         const Counter(),
-// New #1 : End
+        // New #1 : End
       ],
     ),
   );
@@ -150,9 +132,7 @@ Container _buildTextSection(String section) {
 // New #2 : Start
 
 class Counter extends StatefulWidget {
-  const Counter({
-    Key? key,
-  }) : super(key: key);
+  const Counter({Key? key}) : super(key: key);
 
   @override
   State<Counter> createState() => CounterState();

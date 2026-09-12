@@ -10,18 +10,14 @@ class MyApp extends StatelessWidget {
         const Text(
           'Shop Name',
           textDirection: TextDirection.ltr,
-          style: TextStyle(
-            fontSize: 32,
-            color: Colors.black87,
-          ),
+          style: TextStyle(fontSize: 32, color: Colors.black87),
         ),
         Center(
           child: Image.network(
-              'https://storage.googleapis.com/cms-storage-bucket/780e0e64d323aad2cdd5.png',
-//      'https://storage.googleapis.com/cms-storage-bucket/c823e53b3a1a7b0d36a9.png',
-//      'https://storage.googleapis.com/cms-storage-bucket/4cdf1c5482cd30174cfe.png',
-              width: 300,
-              height: 300),
+            'https://docs.flutter.dev/assets/images/dash/early-dash-sketches5.jpg',
+            width: 300,
+            height: 300,
+          ),
         ),
         Container(
           padding: const EdgeInsets.all(20),
@@ -98,11 +94,13 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('AppBar Title'),
+          backgroundColor: Colors.blue,
+          foregroundColor: Colors.white,
         ),
-        body:
-            Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-          groupAggregated,
-        ]),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [groupAggregated],
+        ),
       ),
     );
   }

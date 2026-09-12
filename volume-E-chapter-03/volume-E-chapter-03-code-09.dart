@@ -10,16 +10,23 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('AppBar Title'),
+          backgroundColor: Colors.blue,
+          foregroundColor: Colors.white,
         ),
-        body:
-            Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-          Image.network(
-              'https://storage.googleapis.com/cms-storage-bucket/780e0e64d323aad2cdd5.png'),
-          Image.network(
-              'https://storage.googleapis.com/cms-storage-bucket/780e0e64d323aad2cdd5.png'),
-          Image.network(
-              'https://storage.googleapis.com/cms-storage-bucket/780e0e64d323aad2cdd5.png'),
-        ]),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Image.network(
+              'https://docs.flutter.dev/assets/images/dash/early-dash-sketches5.jpg',
+            ),
+            Image.network(
+              'https://docs.flutter.dev/assets/images/dash/early-dash-sketches5.jpg',
+            ),
+            Image.network(
+              'https://docs.flutter.dev/assets/images/dash/early-dash-sketches5.jpg',
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -7,10 +7,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: _title,
-      home: const MyStatefulWidget(),
-    );
+    return MaterialApp(title: _title, home: const MyStatefulWidget());
   }
 }
 
@@ -48,16 +45,12 @@ class MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutter Sketch Application'),
-        ),
+        appBar: AppBar(title: const Text('Flutter Sketch Application')),
         body: PageView(
           controller: _pageController,
           children: <Widget>[
             Scaffold(
-              body: Center(
-                child: _widgetOptions.elementAt(_selectedIndex),
-              ),
+              body: Center(child: _widgetOptions.elementAt(_selectedIndex)),
               bottomNavigationBar: BottomNavigationBar(
                 items: const <BottomNavigationBarItem>[
                   BottomNavigationBarItem(
@@ -90,12 +83,12 @@ class MyStatefulWidgetState extends State<MyStatefulWidget> {
 
 class StarWidget extends StatelessWidget {
   final Map info = {
-    'titleImageLink': 'https://storage.googleapis.com/cms-storage-bucket/'
-        '2f118a9971e4ca6ad737.png',
+    'titleImageLink': 'https://flutter.dev/assets/flutter-on-mobile.825104937d6f90daae08ce20d9c7c350.png',
     'titleSectionHeader': 'Flutter on Mobile',
     'titleSectionBody': 'https://flutter.dev/multi-platform/mobile',
     'titleSectionScore': 100,
-    'textSection': 'Bring your app idea to more users from day one by'
+    'textSection':
+        'Bring your app idea to more users from day one by'
         ' building with Flutter '
         'on iOS and Android simultaneously, without sacrificing features, '
         'quality, or performance. All mobile on day one: '
@@ -112,29 +105,22 @@ class StarWidget extends StatelessWidget {
     final titleImage = _buildTitleImage(info['titleImageLink']);
     Widget textSection = _buildTextSection(info['textSection']);
     Widget buttonSection = _buildButtonSection(Theme.of(context).primaryColor);
-    Widget titleSection = _buildTitleSection(info['titleSectionHeader'],
-        info['titleSectionBody'], info['titleSectionScore']);
+    Widget titleSection = _buildTitleSection(
+      info['titleSectionHeader'],
+      info['titleSectionBody'],
+      info['titleSectionScore'],
+    );
 
     return Scaffold(
       body: ListView(
-        children: [
-          titleImage,
-          titleSection,
-          buttonSection,
-          textSection,
-        ],
+        children: [titleImage, titleSection, buttonSection, textSection],
       ),
     );
   }
 }
 
 Image _buildTitleImage(String imageName) {
-  return Image.network(
-    imageName,
-    width: 600,
-    height: 240,
-    fit: BoxFit.cover,
-  );
+  return Image.network(imageName, width: 600, height: 240, fit: BoxFit.cover);
 }
 
 Container _buildTitleSection(String name, String addr, int count) {
@@ -150,17 +136,10 @@ Container _buildTitleSection(String name, String addr, int count) {
                 padding: const EdgeInsets.only(bottom: 8),
                 child: Text(
                   name,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
               ),
-              Text(
-                addr,
-                style: TextStyle(
-                  color: Colors.grey[500],
-                ),
-              ),
+              Text(addr, style: TextStyle(color: Colors.grey[500])),
             ],
           ),
         ),
@@ -215,9 +194,7 @@ Container _buildTextSection(String section) {
 }
 
 class Counter extends StatefulWidget {
-  const Counter({
-    Key? key,
-  }) : super(key: key);
+  const Counter({Key? key}) : super(key: key);
 
   @override
   State<Counter> createState() => CounterState();
@@ -267,9 +244,7 @@ class HelloWidget extends StatelessWidget {
         child: TextButton(
           style: TextButton.styleFrom(
             foregroundColor: Colors.black,
-            textStyle: const TextStyle(
-              fontSize: 32,
-            ),
+            textStyle: const TextStyle(fontSize: 32),
           ),
           onPressed: () {
             showAlertDialog(context);
@@ -320,17 +295,15 @@ class HomeWidget extends StatelessWidget {
         const Text(
           'Shop Name',
           textDirection: TextDirection.ltr,
-          style: TextStyle(
-            fontSize: 32,
-            color: Colors.black87,
-          ),
+          style: TextStyle(fontSize: 32, color: Colors.black87),
         ),
         Center(
           child: Image.network(
-              'https://storage.googleapis.com/cms-storage-bucket/'
-              '780e0e64d323aad2cdd5.png',
-              width: 300,
-              height: 300),
+            'https://flutter.dev/assets/flutter-on-mobile.825104937d6f90daae08ce20d9c7c350.png',
+
+            width: 300,
+            height: 300,
+          ),
         ),
         Container(
           padding: const EdgeInsets.all(20),
@@ -403,9 +376,10 @@ class HomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-        groupAggregated,
-      ]),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [groupAggregated],
+      ),
     );
   }
 }

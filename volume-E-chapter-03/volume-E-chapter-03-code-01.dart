@@ -10,10 +10,10 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('AppBar Title'),
+          backgroundColor: Colors.blue,
+          foregroundColor: Colors.white,
         ),
-        body: const Center(
-          child: Icon(Icons.star, color: Colors.black),
-        ),
+        body: const Center(child: Icon(Icons.star, color: Colors.black)),
       ),
     );
   }

@@ -10,14 +10,17 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('AppBar Title'),
+          backgroundColor: Colors.blue,
+          foregroundColor: Colors.white,
         ),
         body: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: const [
-              Icon(Icons.star, color: Colors.black),
-              Icon(Icons.star, color: Colors.black),
-              Icon(Icons.star, color: Colors.black),
-            ]),
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: const [
+            Icon(Icons.star, color: Colors.black),
+            Icon(Icons.star, color: Colors.black),
+            Icon(Icons.star, color: Colors.black),
+          ],
+        ),
       ),
     );
   }

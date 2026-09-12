@@ -47,16 +47,13 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('AppBar Title'),
+          backgroundColor: Colors.blue,
+          foregroundColor: Colors.white,
         ),
-        body:
-            Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-          group1,
-          group2,
-          item4,
-          item5,
-          item7,
-          item8,
-        ]),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [group1, group2, item4, item5, item7, item8],
+        ),
       ),
     );
   }

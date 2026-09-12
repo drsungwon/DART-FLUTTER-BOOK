@@ -10,15 +10,14 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('AppBar Title'),
+          backgroundColor: Colors.blue,
+          foregroundColor: Colors.white,
         ),
         body: const Center(
           child: Text(
             'Hello, World!',
             textDirection: TextDirection.ltr,
-            style: TextStyle(
-              fontSize: 32,
-              color: Colors.black,
-            ),
+            style: TextStyle(fontSize: 32, color: Colors.black),
           ),
         ),
       ),
