@@ -7,10 +7,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: _title,
-      home: const MyStatefulWidget(),
-    );
+    return MaterialApp(title: _title, home: const MyStatefulWidget());
   }
 }
 
@@ -26,22 +23,15 @@ class MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   int _selectedIndex = 0;
 
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static const TextStyle optionStyle = TextStyle(
+    fontSize: 30,
+    fontWeight: FontWeight.bold,
+  );
 
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Hello',
-      style: optionStyle,
-    ),
-    Text(
-      'Star',
-      style: optionStyle,
-    ),
+    Center(child: Text('Home', style: optionStyle)),
+    Center(child: Text('Hello', style: optionStyle)),
+    Center(child: Text('Star', style: optionStyle)),
   ];
 
   @override
@@ -51,6 +41,14 @@ class MyStatefulWidgetState extends State<MyStatefulWidget> {
   }
 
   void _onItemTapped(int index) {
+    _pageController.animateToPage(
+      index,
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeInOut,
+    );
+  }
+
+  void _onPageChanged(int index) {
     setState(() {
       _selectedIndex = index;
     });
@@ -58,41 +56,22 @@ class MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutter Sketch Application'),
-        ),
-        body: PageView(
-          controller: _pageController,
-          children: <Widget>[
-            Scaffold(
-              body: Center(
-                child: _widgetOptions.elementAt(_selectedIndex),
-              ),
-              bottomNavigationBar: BottomNavigationBar(
-                items: const <BottomNavigationBarItem>[
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.home),
-                    label: 'Home',
-                  ),
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.wb_cloudy),
-                    label: 'Hello',
-                  ),
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.star),
-                    label: 'Star',
-                  ),
-                ],
-                currentIndex: _selectedIndex,
-                selectedItemColor: Colors.white,
-                backgroundColor: Colors.blueAccent,
-                onTap: _onItemTapped,
-              ),
-            ),
-          ],
-        ),
+    return Scaffold(
+      appBar: AppBar(title: const Text('Flutter Sketch Application')),
+      body: PageView(
+        controller: _pageController,
+        onPageChanged: _onPageChanged,
+        children: _widgetOptions,
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.wb_cloudy), label: 'Hello'),
+          BottomNavigationBarItem(icon: Icon(Icons.star), label: 'Star'),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.blueAccent,
+        onTap: _onItemTapped,
       ),
     );
   }
