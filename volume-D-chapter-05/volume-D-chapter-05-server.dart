@@ -23,7 +23,7 @@ Future main() async {
             readDB(db, request);
             break;
           case 'PUT': // Update
-            upateDB(db, request);
+            updateDB(db, request);
             break;
           case 'DELETE': // Delete
             deleteDB(db, request);
@@ -36,7 +36,10 @@ Future main() async {
       }
     } else {
       printAndSendHttpResponse(
-          db, request, "${request.method} {ERROR: Unsupported API}");
+        db,
+        request,
+        "${request.method} {ERROR: Unsupported API}",
+      );
     }
   }
 }
@@ -60,7 +63,11 @@ void printHttpRequestInfo(HttpRequest request) async {
   }
 }
 
-void printAndSendHttpResponse(var db, var request, var content) async {
+void printAndSendHttpResponse(
+  dynamic db,
+  dynamic request,
+  dynamic content,
+) async {
   print("\$ $content \n> current DB     : $db");
   request.response
     ..headers.contentType = ContentType('text', 'plain', charset: "utf-8")
@@ -70,7 +77,7 @@ void printAndSendHttpResponse(var db, var request, var content) async {
   await request.response.close();
 }
 
-void createDB(var db, var request) async {
+void createDB(dynamic db, dynamic request) async {
   var content = await utf8.decoder.bind(request).join();
   var transaction = jsonDecode(content) as Map;
   var key, value;
@@ -91,7 +98,7 @@ void createDB(var db, var request) async {
   printAndSendHttpResponse(db, request, content);
 }
 
-void readDB(var db, var request) async {
+void readDB(dynamic db, dynamic request) async {
   var key = request.uri.pathSegments.last;
   var content, transaction;
 
@@ -105,7 +112,7 @@ void readDB(var db, var request) async {
   printAndSendHttpResponse(db, request, content);
 }
 
-void upateDB(var db, var request) async {
+void updateDB(dynamic db, dynamic request) async {
   var content = await utf8.decoder.bind(request).join();
   var transaction = jsonDecode(content) as Map;
   var key, value;
@@ -126,7 +133,7 @@ void upateDB(var db, var request) async {
   printAndSendHttpResponse(db, request, content);
 }
 
-void deleteDB(var db, var request) async {
+void deleteDB(dynamic db, dynamic request) async {
   var key = request.uri.pathSegments.last;
   var content, value;
 

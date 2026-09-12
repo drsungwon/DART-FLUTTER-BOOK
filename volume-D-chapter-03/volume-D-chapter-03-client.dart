@@ -64,7 +64,7 @@ Future main() async {
   printHttpContentInfo(httpResponse, httpResponseContent);
 }
 
-void printHttpContentInfo(var httpResponse, var httpResponseContent) {
+void printHttpContentInfo(dynamic httpResponse, dynamic httpResponseContent) {
   print("|<- status-code    : ${httpResponse.statusCode}");
   print("|<- content-type   : ${httpResponse.headers.contentType}");
   print("|<- content-length : ${httpResponse.headers.contentLength}");

@@ -56,7 +56,7 @@ void httpGetHandler(HttpRequest request) async {
   if (request.uri.path == '/') {
     var content = "Hello, World!";
     request.response
-      ..headers.contentType = ContentType('text','plain',charset:"utf-8")
+      ..headers.contentType = ContentType('text', 'plain', charset: "utf-8")
       ..headers.contentLength = content.length
       ..statusCode = HttpStatus.ok
       ..write(content);
@@ -65,7 +65,7 @@ void httpGetHandler(HttpRequest request) async {
     var result = int.parse(vars[1]) + int.parse(vars[2]);
     var content = "${vars[1]} + ${vars[2]} = $result";
     request.response
-      ..headers.contentType = ContentType('text','plain',charset:"utf-8")
+      ..headers.contentType = ContentType('text', 'plain', charset: "utf-8")
       ..headers.contentLength = content.length
       ..statusCode = HttpStatus.ok
       ..write(content);
@@ -73,14 +73,14 @@ void httpGetHandler(HttpRequest request) async {
     var file = File(request.uri.path.substring(1));
     var content = await file.readAsString();
     request.response
-      ..headers.contentType = ContentType('text','plain',charset:"utf-8")
+      ..headers.contentType = ContentType('text', 'plain', charset: "utf-8")
       ..headers.contentLength = content.length
       ..statusCode = HttpStatus.ok
       ..write(content);
   } else {
     var content = "Unsupported URI";
     request.response
-      ..headers.contentType = ContentType('text','plain',charset:"utf-8")
+      ..headers.contentType = ContentType('text', 'plain', charset: "utf-8")
       ..headers.contentLength = content.length
       ..statusCode = HttpStatus.notFound
       ..write(content);
@@ -88,7 +88,7 @@ void httpGetHandler(HttpRequest request) async {
   await request.response.close();
 }
 
-void httpPutHandler(var addr, var port, HttpRequest request) async {
+void httpPutHandler(dynamic addr, dynamic port, HttpRequest request) async {
   var content = await utf8.decoder.bind(request).join();
   var file = await File(request.uri.path.substring(1)).openWrite();
   print("\> content        : ${content}");
@@ -97,7 +97,7 @@ void httpPutHandler(var addr, var port, HttpRequest request) async {
     ..close();
   content = 'http://$addr:$port${request.uri.path} created';
   request.response
-    ..headers.contentType = ContentType('text','plain',charset:"utf-8")
+    ..headers.contentType = ContentType('text', 'plain', charset: "utf-8")
     ..headers.contentLength = content.length
     ..statusCode = HttpStatus.ok
     ..write(content);
@@ -110,7 +110,7 @@ void httpPostHandler(HttpRequest request) async {
   print("\> content        : ${content}");
   content = "Product '${product[1]}' accepted";
   request.response
-    ..headers.contentType = ContentType('text','plain',charset:"utf-8")
+    ..headers.contentType = ContentType('text', 'plain', charset: "utf-8")
     ..headers.contentLength = content.length
     ..statusCode = HttpStatus.ok
     ..write(content);
@@ -123,14 +123,14 @@ void httpDeleteHandler(HttpRequest request) async {
     var content = "$filename deleted";
     File(filename).deleteSync();
     request.response
-      ..headers.contentType = ContentType('text','plain',charset:"utf-8")
+      ..headers.contentType = ContentType('text', 'plain', charset: "utf-8")
       ..headers.contentLength = content.length
       ..statusCode = HttpStatus.ok
       ..write(content);
   } else {
     var content = "$filename not found";
     request.response
-      ..headers.contentType = ContentType('text','plain',charset:"utf-8")
+      ..headers.contentType = ContentType('text', 'plain', charset: "utf-8")
       ..headers.contentLength = content.length
       ..statusCode = HttpStatus.notFound
       ..write(content);

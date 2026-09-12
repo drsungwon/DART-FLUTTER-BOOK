@@ -12,7 +12,7 @@ Future main() async {
   HttpClientRequest httpRequest;
   HttpClientResponse httpResponse;
 
-// start-of-modification
+  // start-of-modification
   print("|-> POST JSON Format");
   Map jsonContent = {'Korea': 'Seoul', 'Japan': 'Tokyo', 'China': 'Beijing'};
   var content = jsonEncode(jsonContent);
@@ -24,10 +24,10 @@ Future main() async {
   httpResponse = await httpRequest.close();
   httpResponseContent = await utf8.decoder.bind(httpResponse).join();
   printHttpContentInfo(httpResponse, httpResponseContent);
-// end-of-modification
+  // end-of-modification
 }
 
-void printHttpContentInfo(var httpResponse, var httpResponseContent) {
+void printHttpContentInfo(dynamic httpResponse, dynamic httpResponseContent) {
   print("|<- status-code    : ${httpResponse.statusCode}");
   print("|<- content-type   : ${httpResponse.headers.contentType}");
   print("|<- content-length : ${httpResponse.headers.contentLength}");

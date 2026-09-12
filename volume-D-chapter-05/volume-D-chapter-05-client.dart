@@ -15,7 +15,7 @@ Future main() async {
   var content;
   var jsonContent = <dynamic, dynamic>{};
 
-// Create : POST
+  // Create : POST
   print("|-> [Step.1] Create by POST");
   jsonContent = {'0001': 'Seoul'};
   content = jsonEncode(jsonContent);
@@ -28,7 +28,7 @@ Future main() async {
   httpResponseContent = await utf8.decoder.bind(httpResponse).join();
   printHttpContentInfo(httpResponse, httpResponseContent);
 
-// Create : POST
+  // Create : POST
   print("|-> [Step.2] Create by POST");
   jsonContent = {'0002': 'Busan'};
   content = jsonEncode(jsonContent);
@@ -41,7 +41,7 @@ Future main() async {
   httpResponseContent = await utf8.decoder.bind(httpResponse).join();
   printHttpContentInfo(httpResponse, httpResponseContent);
 
-// Read : GET
+  // Read : GET
   print("|-> [Step.3] Read by GET");
   serverPath = "/api/0001";
   httpRequest = await httpClient.get(serverIp, serverPort, serverPath);
@@ -49,7 +49,7 @@ Future main() async {
   httpResponseContent = await utf8.decoder.bind(httpResponse).join();
   printHttpContentInfo(httpResponse, httpResponseContent);
 
-// Update : PUT
+  // Update : PUT
   print("|-> [Step.4] Update by PUT");
   jsonContent = {'0001': 'Sungnam'};
   content = jsonEncode(jsonContent);
@@ -62,7 +62,7 @@ Future main() async {
   httpResponseContent = await utf8.decoder.bind(httpResponse).join();
   printHttpContentInfo(httpResponse, httpResponseContent);
 
-// Read : DELETE
+  // Read : DELETE
   print("|-> [Step.5] Delete by DELETE");
   serverPath = "/api/0001";
   httpRequest = await httpClient.delete(serverIp, serverPort, serverPath);
@@ -70,7 +70,7 @@ Future main() async {
   httpResponseContent = await utf8.decoder.bind(httpResponse).join();
   printHttpContentInfo(httpResponse, httpResponseContent);
 
-// Read : GET {ERROR}
+  // Read : GET {ERROR}
   print("|-> [Step.6] Unsupported API");
   serverPath = "/apiX/0001";
   httpRequest = await httpClient.get(serverIp, serverPort, serverPath);
@@ -78,7 +78,7 @@ Future main() async {
   httpResponseContent = await utf8.decoder.bind(httpResponse).join();
   printHttpContentInfo(httpResponse, httpResponseContent);
 
-// Read : GET {ERROR}
+  // Read : GET {ERROR}
   print("|-> [Step.7] Unsupported Read");
   serverPath = "/api/0001";
   httpRequest = await httpClient.get(serverIp, serverPort, serverPath);
@@ -87,7 +87,7 @@ Future main() async {
   printHttpContentInfo(httpResponse, httpResponseContent);
 }
 
-void printHttpContentInfo(var httpResponse, var httpResponseContent) {
+void printHttpContentInfo(dynamic httpResponse, dynamic httpResponseContent) {
   print("|<- status-code    : ${httpResponse.statusCode}");
   print("|<- content-type   : ${httpResponse.headers.contentType}");
   print("|<- content-length : ${httpResponse.headers.contentLength}");
